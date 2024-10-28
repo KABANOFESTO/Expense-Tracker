@@ -4,6 +4,11 @@ import './App.css';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import Dashboard from './components/Dashboard';
+import ExpenseForm from './components/ExpenseForm';
+import ExpenseList from './components/ExpenseList';
+
+
+
 
 const App = () => {
   const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
@@ -17,6 +22,8 @@ const App = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/dashboard/add-expense" element={<ExpenseForm />} />
+            <Route path="/dashboard/expense-list" element={<ExpenseList />} />
           </Routes>
         </div>
       </div>
